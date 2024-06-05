@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DreamScape</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- header-->
+    <header>
+      <div class="logo">
+        <img src="images/logo.PNG" />
+        <h1><a href="index.html">DreamScape</a></h1>
+      </div>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="explore-dreams.html">Explore Dreams</a>
+        <a href="blog.html">Blog</a>
+        <a href="/">Community</a>
+        <a href="about.html" class="link">About Us</a>
+        <a href="team.html" class="link">Team</a>
+        <a href="/" class="link">Contact</a>
+        <a href="recording.html">Recording</a>
+      </nav>
+      <button class="nav-btn">|||</button>
+    </header>
+    <!-- Ana İçerik -->
+    <div id="hero">
+      <div class="hero-inner">
+        <h1>Welcome to DreamScape</h1>
+        <p>
+          DreamScape is a dream recording and sharing platform. You can record
+          and share your dreams with others!
+        </p>
+        <div class="buttons">
+          <p>Do you want to learn more information ?</p>
+          <button>Yes</button>
+          <button>No</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIDEO -->
+    <div class="video-container">
+      <video id="video-player" controls>
+        <source src="My first Avatar Video.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <script>
+      var video = document.getElementById("video-player");
+      var videoName = document.getElementById("video-name");
+
+      video.addEventListener("click", function () {
+        if (video.paused) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      });
+
+      video.addEventListener("play", function () {
+        videoName.style.display = "none";
+      });
+
+      video.addEventListener("pause", function () {
+        videoName.style.display = "block";
+      });
+    </script>
+
+    <main>
+      <section id="image-sec">
+        <div class="image-sec-info">
+          <p>
+            Explore the wonders of Dreamscape! If you're already a member, dive
+            into the magic by logging in.
+          </p>
+          <p>
+            New to Dreamscape? Join our vibrant community today! Register now to
+            unlock a world of exclusive benefits, thrilling adventures, and
+            captivating experiences.
+          </p>
+
+          <p>
+            Don't miss out on the latest updates and exclusive offers – start
+            your journey with Dreamscape now!
+          </p>
+          <a href="register.html">
+            <button>Register/Log in</button>
+          </a>
+        </div>
+        <div class="images">
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+        </div>
+      </section>
+    </main>
+
+    <!--FOOTER-->
+    <footer>
+      <div class="footer-area">
+        <div class="footer-links">
+          <h2>Company</h2>
+          <a href="">About</a>
+          <a href="">Team</a>
+          <a href="">Discover</a>
+          <a href="">Why us</a>
+        </div>
+
+        <div class="footer-links">
+          <h2>Sources</h2>
+          <a href="">Agreement</a>
+          <a href="">Privacy</a>
+          <a href="">Blog</a>
+          <a href="">Support</a>
+        </div>
+        <div class="footer-links">
+          <h2>Platform</h2>
+          <a href="">Community</a>
+          <a href="">User Guide</a>
+          <a href="">User Reviews</a>
+          <a href="">Simulation</a>
+        </div>
+
+        <div class="footer-links">
+          <h1>DreamScape</h1>
+          <p>Subscribe to our dreams</p>
+          <div class="field">
+            <input type="text" placeholder="enter your mail" />
+            <button>Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <p class="footer-bottom">Copyright &copy; 2024</p>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
